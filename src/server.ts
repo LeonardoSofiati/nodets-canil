@@ -20,7 +20,7 @@ server.use(express.urlencoded({extended: true}));
 server.use('/', mainRoutes);
 
 server.use((req: Request, res: Response) => {
-    res.status(400).send('Página não encontrada');
+    res.status(400).render('pages/404')
 });
 
 server.listen(process.env.PORT);
